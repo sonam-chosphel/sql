@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <!-- Add Student -->
+    <section>
+        <h2>Add Student</h2>
+        <form action="/add" method="post">
+            <input type="text" name="name" placeholder="Name" required><br>
+            <input type="number" name="age" placeholder="Age" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <select name="gender" required>
+                <option value="">Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select><br>
+            <input type="text" name="department" placeholder="Department" required><br>
+            <input type="number" name="year" placeholder="Year of Study" required><br>
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <!-- Update Student -->
+    <section>
+        <h2>Update Student</h2>
+        <form action="/update" method="post">
+            <input type="number" name="id" placeholder="Student ID to Update" required><br>
+            <input type="text" name="name" placeholder="New Name"><br>
+            <input type="number" name="age" placeholder="New Age"><br>
+            <input type="email" name="email" placeholder="New Email"><br>
+            <input type="text" name="gender" placeholder="New Gender"><br>
+            <input type="text" name="department" placeholder="New Department"><br>
+            <input type="number" name="year" placeholder="New Year of Study"><br>
+            <button type="submit">Update Student</button>
+        </form>
+    </section>
+
+    <!-- Delete Student -->
+    <section>
+        <h2>Delete Student</h2>
+        <form action="/delete" method="post">
+            <input type="number" name="id" placeholder="Student ID to Delete" required><br>
+            <button type="submit">Delete Student</button>
+        </form>
+    </section>
+
+    <!-- View Students -->
+    <section>
+        <h2>View All Students</h2>
+        <form action="/view" method="get">
+            <button type="submit">Show Students</button>
+        </form>
+    </section>
+
+</body>
+</html>
